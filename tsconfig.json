@@ -1,0 +1,16 @@
+{
+  "files": [],
+  "references": [
+    { "path": "apps/platform" },
+    { "path": "apps/worker" },
+    { "path": "packages/sdk" }
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@platform/*": ["apps/platform/src/*"],
+      "@worker/*": ["apps/worker/src/*"],
+      "@sdk/*": ["packages/sdk/src/*"]
+    }
+  }
+}

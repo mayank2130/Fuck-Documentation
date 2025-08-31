@@ -1,0 +1,55 @@
+{
+  "name": "@techno-king/sdk",
+  "version": "1.0.2",
+  "description": "SDK for AIBoomi platform integrations with Gmail and Notion",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default":"./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "notion",
+    "gmail",
+    "api",
+    "sdk",
+    "integrations"
+  ],
+  "author": "Mayank",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techno-king/aiboomi-sdk.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "tsup src/index.ts --watch --dts --format esm,cjs",
+    "build": "tsup src/index.ts --dts --format esm,cjs",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@notionhq/client": "^2.2.14",
+    "googleapis": "^133.0.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2"
+  },
+  "peerDependencies": {
+    "undici": "^5.0.0"
+  }
+}

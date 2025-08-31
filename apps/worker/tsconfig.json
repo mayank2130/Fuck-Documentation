@@ -1,0 +1,24 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2021",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "noEmitOnError": true,
+    "resolveJsonModule": true,
+    "types": ["node"],
+    "baseUrl": ".",
+    "paths": {
+      "@techno-king/sdk/*": ["../../packages/sdk/src/*"],
+      "@platform/*": ["../platform/src/*"]
+    }
+  },
+  "include": ["queue/**/*.ts", "../platform/src/lib/**/*.ts"],
+  "exclude": ["node_modules", "dist"],
+  "references": [{ "path": "../../packages/sdk" }]
+}
